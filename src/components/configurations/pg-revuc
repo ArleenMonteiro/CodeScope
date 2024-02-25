@@ -1,0 +1,6 @@
+export default {
+  host: process.env.PG_revuc_HOST,
+  port: parseInt(process.env.PG_revuc_PORT, 10),
+  database: process.env.PG_revuc_DATABASE_NAME,
+ 
+};
