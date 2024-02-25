@@ -1,0 +1,36 @@
+version: '3.4'
+services:
+  pg-admin:
+    image: dpage/pgadmin4
+    container_name: pg-admin
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PG_ADMIN_USERNAME}
+      PGADMIN_DEFAULT_PASSWORD: ${PG_ADMIN_PASSWORD}
+    ports:
+      - 5050:80
+  pg-revuc:
+    image: bitnami/postgresql:15.1.0
+    ports:
+      - ${PG_revuc_PORT}:${PG_revuc_PORT}
+    environment:
+      POSTGRESQL_USERNAME: ${PG_revuc_USERNAME}
+      POSTGRESQL_PASSWORD: ${PG_revuc_PASSWORD}
+      POSTGRESQL_DATABASE: ${PG_revuc_DATABASE_NAME}
+    user: root
+    restart: unless-stopped
+    container_name: pg-revuc
+    logging:
+      options:
+        max-size: '10m'
+        max-file: '3'
+  revuc:
+    ports:
+      - 9999:3000
+    
+      options:
+        max-size: '10m'
+        max-file: '3'
+volumes:
+  pg_revuc_vol:
+    driver: local
