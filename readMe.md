@@ -5,7 +5,7 @@ With infinite ideas to create a project on, participants are still left with a f
 
 On the other hand, judges have a very daunting task of judging numerous projects at hand. With less than 10 minutes given to each project, it is surely not the judges' fault if they aren't able to inspect the code written by the participants. This, in a sense, takes away an important part of the hackathon- the code itself. CodeScope comes into play here by analyzing the code for the judges and giving relevant metrics such as creativity and plagiarism. This hack doesn't replace judges but rather aims to empower them with information that can help them make a better judgment that would be completely fair to all hackers. 
 
-**At the end of the day, the code matters. ;)***
+**At the end of the day, the code matters. ;)**
 
 
 ## What it does
